@@ -4,9 +4,7 @@ const selectFirst = document.getElementById("selectFirst");
 const selectComputerMode = document.getElementById("selectComputerMode");
 const selectMultiPlayerMode = document.getElementById("selectMultiPlayerMode");
 const computerMode = document.getElementsByClassName("computerMode")[0];
-const allButtons = document.querySelectorAll(".btn");
-const toast = document.getElementById("toast");
-const toastMessage = document.getElementById("toast-message");
+
 selectComputerMode.addEventListener("change", handleRadioChange);
 selectMultiPlayerMode.addEventListener("change", handleRadioChange);
 
@@ -47,7 +45,7 @@ for (let i = 1; i <= 9; i++) {
   box.appendChild(block);
 }
 
-
+const allButtons = document.querySelectorAll(".btn");
 const player = [true, "X", "O"];
 let board = ["", "", "", "", "", "", "", "", ""];
 
@@ -62,7 +60,8 @@ const winningCombinations = [
   [2, 4, 6],
 ];
 
-
+const toast = document.getElementById("toast");
+const toastMessage = document.getElementById("toast-message");
 
 function startAgain() {
   for (let i = 0; i < board.length; i++) {
