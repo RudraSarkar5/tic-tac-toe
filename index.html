@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/tic-tac-toe.png" type="image/x-icon">
-    <title>Tic-Tac-Toe</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <div class="h-screen md:h-fit w-screen bg-sky-900">
+      
+      <h1 class="text-white text-4xl text-center py-2 shadow-lg">
+        Tic Tac Toe
+      </h1>
+      <div class="py-2 flex flex-col gap-8 md:gap-3 justify-center items-center">
+        <div class="relative right-8">
+          <h1 class="text-2xl font-bold">Game Mood:</h1>
+          <div>
+            <div class="text-xl flex gap-3">
+              <input
+                id="selectComputerMode"
+                type="radio"
+                name="selectMode"
+                checked
+              />
+              <label for="">Vs Computer</label>
+            </div>
+            <div class="text-xl flex gap-3">
+              <input
+                id="selectMultiPlayerMode"
+                type="radio"
+                name="selectMode"
+              />
+              <label for="">Multiplayer</label>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2 computerMode">
+          <h1 class="text-2xl font-bold">Choose Your Move:</h1>
+          <div>
+            <div class="text-xl flex gap-3">
+              <input id="selectFirst" type="radio" name="selectMove" checked />
+              <label for="">First Move</label>
+            </div>
+            <div class="text-xl flex gap-3">
+              <input id="selectSecond" type="radio" name="selectMove" />
+              <label for="">Second Move</label>
+            </div>
+          </div>
+
+          <button
+            class="px-1.5 py-1 shadow-lg rounded-lg bg-blue-600 text-white hover:bg-blue-950"
+            id="startButton"
+          >
+            Start
+          </button>
+        </div>
+        <div class="w-96">
+            <div id="toast" class="hidden">
+            <p id="toast-message"></p>
+            </div>
+
+            <div id="board" class="grid grid-cols-3 gap-2 p-4"></div>
+            </div>
+      
+        </div> 
+      </div>
+    </div>
     
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

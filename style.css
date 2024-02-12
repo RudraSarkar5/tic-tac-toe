@@ -1,0 +1,29 @@
+body{
+    margin:  auto;
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#toast {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: top 0.5s ease;
+    z-index: 999;
+    display: none;
+  }
+
+  
+  .makeDisable{
+    visibility: hidden;
+  }
+  
